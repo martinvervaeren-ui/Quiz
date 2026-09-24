@@ -1,0 +1,525 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated). Box sizing should not be inherited. (https://www.oddbird.net/2025/09/04/box-model/)
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the line height in all browsers.
+3. Prevent adjustments of font size after orientation changes in iOS.
+4. Use a more readable tab size (opinionated).
+*/
+html {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 1 */
+  line-height: 1.15; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4; /* 4 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+@font-face {
+  font-family: Barrio;
+  src: url("webfont/Barrio/Barrio-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Rubik;
+  src: url("webfont/Rubik/Rubik-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 300 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Rubik;
+  src: url("webfont/Rubik/Rubik-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 300 900;
+  font-style: italic;
+}
+:root {
+  --color-beige: #F2E9DA;
+  --color-noir: #1f1f1f;
+  --color-bleu: #4cc0ad;
+  --color-rouge: #e84558;
+  --color-jaune: #efbc25;
+  --color-blanc: #fff;
+  --fontfamily-primary: 'Rubik';
+  --fontfamily-number: 'Barrio';
+  --border-radius-primary: 2rem;
+  --border-radius-secondary: .5rem;
+  --button-padding-inline: 1.5rem;
+  --button-padding-block: .8rem;
+  --button-radius: 10rem;
+  --margin-link: 1.3rem;
+  --padding-nav: 2rem;
+}
+
+img {
+  inline-size: 100%;
+}
+
+body {
+  font-family: var(--fontfamily-primary);
+  background: var(--color-beige);
+  color: var(--color-noir);
+}
+
+nav a {
+  color: var(--color-noir);
+  text-decoration: none;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+main {
+  inline-size: 80%;
+  margin-inline: auto;
+}
+
+.navbar {
+  padding: calc(var(--padding-nav) / 2) var(--padding-nav);
+  color: var(--color-noir);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.navbar__logo img {
+  inline-size: 8rem;
+}
+.navbar__menu {
+  display: flex;
+  gap: var(--padding-nav);
+}
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.navbar__lang {
+  display: flex;
+  gap: 0.5rem;
+}
+.navbar__lang-link {
+  display: block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--color-noir);
+  border-radius: var(--border-radius-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  padding: var(--padding-nav);
+  margin-block-end: 0;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 420px);
+  align-items: center;
+  gap: 2rem;
+}
+.hero__bg {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  transform: rotate(-1.5deg);
+  background: var(--color-bleu);
+  z-index: -1;
+}
+.hero__title {
+  margin-block: 0;
+  font-size: 4rem;
+  font-weight: 800;
+  text-shadow: 0px 5px 0px var(--color-noir);
+  color: var(--color-beige);
+}
+.hero__description {
+  color: var(--color-noir);
+  inline-size: 28ch;
+  max-inline-size: 100%;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  margin-block: 1.5rem;
+}
+.hero__button {
+  display: inline-block;
+  background: var(--color-jaune);
+  color: var(--color-noir);
+  padding: var(--button-padding-block) var(--button-padding-inline);
+  font-weight: 700;
+  text-decoration: none;
+}
+.hero__illu {
+  inline-size: 100%;
+}
+@media (width <= 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.steps {
+  background: var(--color-noir);
+  padding: var(--padding-nav);
+}
+.steps__subtitle {
+  color: var(--color-rouge);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.steps__title {
+  color: var(--color-beige);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-block: 0.3rem 1rem;
+}
+.steps__question {
+  position: relative;
+  display: inline-block;
+}
+.steps__crown {
+  position: absolute;
+  inset-block-end: 70%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  inline-size: 4rem;
+}
+.steps__description {
+  color: var(--color-blanc);
+  opacity: 0.8;
+  max-inline-size: 60ch;
+  margin-block-end: 2.5rem;
+}
+.steps__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (width <= 700px) {
+  .steps__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step-card__number {
+  display: block;
+  font-family: var(--fontfamily-number);
+  color: var(--color-rouge);
+  font-size: 2.5rem;
+  border-block-end: 1px solid var(--color-blanc);
+}
+.step-card__title {
+  color: var(--color-beige);
+  font-size: 1.2rem;
+  margin-block: 0.3rem 0.8rem;
+  padding-block-end: 0.8rem;
+}
+.step-card__text {
+  color: var(--color-blanc);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  border-block-end: 1px solid var(--color-blanc);
+}
+
+.cultissime {
+  background-color: var(--color-rouge);
+  background-image: url("../images/pattern-red.png");
+  background-repeat: repeat;
+  background-size: 120px;
+  padding: var(--padding-nav);
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+@media (width <= 700px) {
+  .cultissime {
+    grid-template-columns: 1fr;
+  }
+}
+.cultissime__mascot {
+  inline-size: 100%;
+}
+.cultissime__title {
+  color: var(--color-beige);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-block: 0 0.5rem;
+}
+.cultissime__description {
+  color: var(--color-noir);
+  margin-block-end: 1.5rem;
+}
+.cultissime__quote {
+  background: var(--color-noir);
+  color: var(--color-beige);
+  padding: 1.5rem 1.5rem 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.cultissime__quote p {
+  margin: 0;
+}
+.cultissime__reveal {
+  background: var(--color-noir);
+  padding: 0 1.5rem 1.5rem;
+  margin: 0;
+}
+.cultissime__summary {
+  display: inline-block;
+  cursor: pointer;
+  background: var(--color-jaune);
+  color: var(--color-noir);
+  padding: var(--button-padding-block) var(--button-padding-inline);
+  font-weight: 700;
+  list-style: none;
+  margin-block-start: 1rem;
+}
+.cultissime__summary::-webkit-details-marker {
+  display: none;
+}
+.cultissime__answer {
+  color: var(--color-beige);
+  margin-block: 1rem 0;
+}
+
+.categories {
+  background-color: var(--color-noir);
+  background-image: url("../images/pattern-dark.png");
+  background-repeat: repeat;
+  background-size: 120px;
+  padding: var(--padding-nav);
+}
+.categories__subtitle {
+  color: var(--color-rouge);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.categories__title {
+  color: var(--color-beige);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-block: 0.3rem 1rem;
+}
+.categories__description {
+  color: var(--color-blanc);
+  opacity: 0.8;
+  max-inline-size: 60ch;
+  margin-block-end: 2.5rem;
+}
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (width <= 700px) {
+  .categories__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
+  border-radius: var(--border-radius-secondary);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.category-card:hover, .category-card:focus-visible {
+  border-color: var(--color-rouge);
+  transform: translateY(-4px);
+}
+.category-card:active {
+  transform: translateY(-1px);
+}
+.category-card__icon {
+  display: block;
+  inline-size: 2.5rem;
+  margin-block-end: 1rem;
+}
+.category-card__title {
+  color: var(--color-beige);
+  font-size: 1.1rem;
+  margin-block: 0 0.5rem;
+}
+.category-card__text {
+  color: var(--color-blanc);
+  opacity: 0.8;
+  font-size: 0.85rem;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,74 @@
+.categories {
+  background-color: var(--color-noir);
+  background-image: url("../images/pattern-dark.png");
+  background-repeat: repeat;
+  background-size: 120px;
+  padding: var(--padding-nav);
+
+  &__subtitle {
+    color: var(--color-rouge);
+    text-transform: uppercase;
+    font-size: .85rem;
+    font-weight: 700;
+  }
+
+  &__title {
+    color: var(--color-beige);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-block: .3rem 1rem;
+  }
+
+  &__description {
+    color: var(--color-blanc);
+    opacity: .8;
+    max-inline-size: 60ch;
+    margin-block-end: 2.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+    @media (width <= 700px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.category-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid #ffffff26;
+  border-radius: var(--border-radius-secondary);
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--color-rouge);
+    transform: translateY(-4px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+
+  &__icon {
+    display: block;
+    inline-size: 2.5rem;
+    margin-block-end: 1rem;
+  }
+
+  &__title {
+    color: var(--color-beige);
+    font-size: 1.1rem;
+    margin-block: 0 .5rem;
+  }
+
+  &__text {
+    color: var(--color-blanc);
+    opacity: .8;
+    font-size: .85rem;
+  }
+}

@@ -1,0 +1,69 @@
+.cultissime {
+  background-color: var(--color-rouge);
+  background-image: url("../images/pattern-red.png");
+  background-repeat: repeat;
+  background-size: 120px;
+  padding: var(--padding-nav);
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  align-items: center;
+  gap: 2rem;
+
+  @media (width <= 700px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__mascot {
+    inline-size: 100%;
+  }
+
+  &__title {
+    color: var(--color-beige);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-block: 0 .5rem;
+  }
+
+  &__description {
+    color: var(--color-noir);
+    margin-block-end: 1.5rem;
+  }
+
+  &__quote {
+    background: var(--color-noir);
+    color: var(--color-beige);
+    padding: 1.5rem 1.5rem 0;
+    margin: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__reveal {
+    background: var(--color-noir);
+    padding: 0 1.5rem 1.5rem;
+    margin: 0;
+  }
+
+  &__summary {
+    display: inline-block;
+    cursor: pointer;
+    background: var(--color-jaune);
+    color: var(--color-noir);
+    padding: var(--button-padding-block) var(--button-padding-inline);
+    font-weight: 700;
+    list-style: none;
+    margin-block-start: 1rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__answer {
+    color: var(--color-beige);
+    margin-block: 1rem 0;
+  }
+}

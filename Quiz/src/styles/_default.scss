@@ -1,0 +1,20 @@
+//reset
+img {
+  inline-size: 100%;
+}
+body {
+  font-family: var(--fontfamily-primary);
+  background: var(--color-beige);
+  color: var(--color-noir);
+}
+nav {
+  a {
+    color: var(--color-noir);
+    text-decoration: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}

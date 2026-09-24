@@ -1,0 +1,39 @@
+.navbar {
+  padding: calc(var(--padding-nav) / 2) var(--padding-nav);
+  color: var(--color-noir);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  &__logo {
+    img {
+      inline-size: 8rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: var(--padding-nav);
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: .9rem;
+  }
+
+  &__lang {
+    display: flex;
+    gap: .5rem;
+  }
+
+  &__lang-link {
+    display: block;
+    padding: .3rem .8rem;
+    border: 1px solid var(--color-noir);
+    border-radius: var(--border-radius-secondary);
+    font-size: .8rem;
+    font-weight: 500;
+  }
+}
