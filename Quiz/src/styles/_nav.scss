@@ -19,8 +19,36 @@
   }
 
   &__link {
-    font-weight: 500;
-    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    &::before {
+      content: "";
+      display: block;
+      inline-size: 32px;
+      block-size: 32px;
+      flex: 0 0 32px;
+      background-image: url("../images/icon_nav.svg");
+      background-repeat: no-repeat;
+      background-size: 168px 72px;
+    }
+  }
+
+  &__item {
+    &:nth-child(1) .navbar__link::before {
+      background-position: -20px -20px;
+    }
+    &:nth-child(2) .navbar__link::before {
+      background-position: -68px -20px;
+    }
+    &:nth-child(3) .navbar__link::before {
+      background-position: -116px -20px;
+    }
+    &:first-child .navbar__link {
+      border-block-end: 2px solid var(--color-jaune);
+      padding-block-end: .2rem;
+    }
   }
 
   &__lang {

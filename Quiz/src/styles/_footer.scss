@@ -1,0 +1,37 @@
+.footer {
+  background: var(--color-noir);
+  padding: var(--padding-nav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  &__copyright {
+    color: var(--color-blanc);
+    opacity: .8;
+    font-size: .85rem;
+    margin: 0;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    color: var(--color-blanc);
+    font-size: .85rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-rouge);
+    }
+  }
+
+  @media (width <= 700px) {
+    justify-content: center;
+    text-align: center;
+  }
+}
