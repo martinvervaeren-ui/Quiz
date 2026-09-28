@@ -50,25 +50,31 @@
 }
 
 .step-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 1rem;
+  padding-block: 1.5rem;
+  border-block: 1px solid var(--color-blanc);
+
   &__number {
-    display: block;
     font-family: var(--fontfamily-number);
     color: var(--color-rouge);
     font-size: 2.5rem;
-    border-block-end: 1px solid var(--color-blanc);
+    line-height: 1;
   }
 
   &__title {
     color: var(--color-beige);
     font-size: 1.2rem;
-    margin-block: .3rem .8rem;
-    padding-block-end: .8rem;
+    margin: 0;
   }
 
   &__text {
+    grid-column: 1 / -1;
     color: var(--color-blanc);
     opacity: .8;
     font-size: .9rem;
-    border-block-end: 1px solid var(--color-blanc);
+    margin-block: .8rem 0;
   }
 }

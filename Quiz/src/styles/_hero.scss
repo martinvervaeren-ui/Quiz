@@ -36,9 +36,10 @@
 
   &__button {
     display: inline-block;
-    background: var(--color-jaune);
+    background: var(--button-background);
     color: var(--color-noir);
     padding: var(--button-padding-block) var(--button-padding-inline);
+    border: var(--button-border);
     font-weight: 700;
     text-decoration: none;
   }
@@ -51,3 +52,4 @@
     grid-template-columns: 1fr;
   }
 }
+

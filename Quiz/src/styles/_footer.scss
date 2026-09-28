@@ -1,4 +1,7 @@
 .footer {
+  inline-size: var(--layout-inline-size);
+  margin-inline: auto;
+  box-sizing: border-box;
   background: var(--color-noir);
   padding: var(--padding-nav);
   display: flex;

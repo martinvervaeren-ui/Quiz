@@ -1,25 +1,33 @@
 .cultissime {
+  position: relative;
   background-color: var(--color-rouge);
   background-image: url("../images/pattern-red.png");
   background-repeat: repeat;
   background-size: 120px;
   padding: var(--padding-nav);
   display: grid;
-  grid-template-columns: minmax(200px, 300px) 1fr;
+  grid-template-columns: minmax(200px, 300px) minmax(0, 40rem);
+  justify-content: center;
   align-items: center;
   gap: 2rem;
 
-  @media (width <= 700px) {
-    grid-template-columns: 1fr;
+  &__figure {
+    align-self: end;
+    margin-block-end: -5rem;
   }
 
-  &__mascot {
-    inline-size: 100%;
+  &__crown {
+    display: block;
+    position: relative;
+    inline-size: 75%;
+    margin-inline: auto;
+    margin-block-end: -10%;
   }
 
   &__title {
-    color: var(--color-beige);
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--color-noir);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
     margin-block: 0 .5rem;
   }
 
@@ -28,34 +36,64 @@
     margin-block-end: 1.5rem;
   }
 
-  &__quote {
+  &__card {
+    max-inline-size: 60rem;
+    position: relative;
     background: var(--color-noir);
-    color: var(--color-beige);
-    padding: 1.5rem 1.5rem 0;
+    padding: 2.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block-start: 2.5rem;
+      inset-inline-end: 100%;
+      border-block: .75rem solid transparent;
+      border-inline-end: 1.5rem solid var(--color-noir);
+    }
+  }
+
+  &__quote {
+    grid-column: 1 / -1;
     margin: 0;
+    color: var(--color-beige);
     font-size: 1.2rem;
-    font-style: italic;
+    font-weight: 700;
 
     p {
       margin: 0;
     }
   }
 
+  &__hint {
+    margin: 0;
+    color: var(--color-blanc);
+    font-size: .85rem;
+
+    strong {
+      display: block;
+      margin-block-start: .5rem;
+      color: var(--color-rouge);
+    }
+  }
+
   &__reveal {
-    background: var(--color-noir);
-    padding: 0 1.5rem 1.5rem;
     margin: 0;
   }
 
   &__summary {
     display: inline-block;
     cursor: pointer;
-    background: var(--color-jaune);
+    background: var(--button-background);
     color: var(--color-noir);
     padding: var(--button-padding-block) var(--button-padding-inline);
+    border: var(--button-border);
+    box-shadow: var(--button-shadow);
     font-weight: 700;
     list-style: none;
-    margin-block-start: 1rem;
 
     &::-webkit-details-marker {
       display: none;
@@ -65,5 +103,23 @@
   &__answer {
     color: var(--color-beige);
     margin-block: 1rem 0;
+  }
+
+  @media (width <= 700px) {
+    grid-template-columns: 1fr;
+
+    &__figure {
+      justify-self: center;
+      max-inline-size: 240px;
+      margin-block-end: 0;
+    }
+
+    &__card {
+      grid-template-columns: 1fr;
+    }
+
+    &__card::before {
+      display: none;
+    }
   }
 }
