@@ -43,7 +43,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
-    @media (width <= 700px) {
+    @media (width <= 768px) {
       grid-template-columns: 1fr;
     }
   }
@@ -55,7 +55,7 @@
   align-items: center;
   column-gap: 1rem;
   padding-block: 1.5rem;
-  border-block: 1px solid var(--color-blanc);
+  border-block: 1px dotted var(--color-blanc);
 
   &__number {
     font-family: var(--fontfamily-number);

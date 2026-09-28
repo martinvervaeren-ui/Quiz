@@ -10,8 +10,14 @@
 
   <nav class="navbar">
     <a href="#" class="navbar__logo">
-      <img src="images/LOGO-FULL.svg" alt="Movie Kings">
+      <picture>
+        <source media="(width <= 700px)" srcset="images/logo-mk.svg">
+        <img src="images/LOGO-FULL.svg" alt="Movie Kings">
+      </picture>
     </a>
+
+    <input type="checkbox" id="navbar-toggle" class="navbar__toggle" aria-label="Menu">
+    <label for="navbar-toggle" class="navbar__burger" aria-hidden="true"></label>
 
     <ul class="navbar__menu">
       <li class="navbar__item">
@@ -27,7 +33,7 @@
 
     <ul class="navbar__lang">
       <li class="navbar__lang-item">
-        <a href="#" class="navbar__lang-link">FR</a>
+        <a href="#" class="navbar__lang-link navbar__lang-link--active" aria-current="true">FR</a>
       </li>
       <li class="navbar__lang-item">
         <a href="#" class="navbar__lang-link">EN</a>
@@ -54,7 +60,10 @@
         <a href="#" class="hero__button">Jouer maintenant</a>
       </div>
 
-      <img class="hero__illu" src="images/hero-ghoster.png" alt="">
+      <picture class="hero__illu">
+        <source media="(width <= 700px)" srcset="images/king-crown.png">
+        <img class="hero__image" src="images/hero-ghoster.png" alt="">
+      </picture>
     </section>
 
 
@@ -191,7 +200,10 @@
 
 
   <footer class="footer">
-    <p class="footer__copyright">© 2027 Movie Kings</p>
+    <p class="footer__copyright">
+      <img class="footer__logo" src="images/logo-mk.svg" alt="">
+      © 2027 Movie Kings
+    </p>
 
     <nav class="footer__nav">
       <a href="#" class="footer__link">Instagram</a>

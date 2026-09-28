@@ -105,21 +105,43 @@
     margin-block: 1rem 0;
   }
 
-  @media (width <= 700px) {
+  @media (width <= 768px) {
     grid-template-columns: 1fr;
+    gap: 0;
+
+    &__content {
+      display: contents;
+    }
+
+    &__title {
+      order: 1;
+    }
+
+    &__description {
+      order: 2;
+    }
 
     &__figure {
+      order: 3;
       justify-self: center;
-      max-inline-size: 240px;
+      inline-size: 11rem;
       margin-block-end: 0;
     }
 
     &__card {
+      order: 4;
       grid-template-columns: 1fr;
+      margin-block: -3rem -4rem;
+      margin-inline: -1rem;
+
+      &::before {
+        display: none;
+      }
     }
 
-    &__card::before {
-      display: none;
+    &__summary {
+      display: block;
+      text-align: center;
     }
   }
 }

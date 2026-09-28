@@ -5,7 +5,6 @@
   --color-rouge: #e84558;
   --color-jaune: #efbc25;
   --color-blanc: #fff;
-  --color-jaune-fonce: #bf8b08;
 
   --fontfamily-primary: 'Rubik';
   --fontfamily-number: 'Barrio';
@@ -23,4 +22,8 @@
 
   --margin-link: 1.3rem;
   --padding-nav: 2rem;
+
+  @media (width <= 768px) {
+    --layout-inline-size: 100%;
+  }
 }

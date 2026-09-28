@@ -48,8 +48,28 @@
     inline-size: 100%;
   }
 
-  @media (width <= 700px) {
+  @media (width <= 768px) {
     grid-template-columns: 1fr;
+    overflow-x: clip;
+    text-align: center;
+
+    &__illu {
+      order: -1;
+      justify-self: center;
+      inline-size: 12rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__description {
+      margin-inline: auto;
+    }
+
+    &__button {
+      display: block;
+    }
   }
 }
 

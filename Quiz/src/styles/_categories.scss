@@ -120,4 +120,20 @@
     --category-accent: #F2D06B;
     .category-card__icon::before { background-position: -306px -25px; }
   }
+
+  @media (width <= 768px) {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    column-gap: 1.5rem;
+
+    &__title {
+      hyphens: auto;
+    }
+
+    &__text {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: center;
+    }
+  }
 }
